@@ -1,4 +1,5 @@
-# Printing Exploratory Data
+# Course Project 1 - Exploratory Data Analysis
+# Fourth Task - Print 4 pictures into one graphic 
 
 # Read the data
 mydata <- read.table("household_power_consumption.txt",header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")

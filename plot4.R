@@ -1,6 +1,9 @@
 # Course Project 1 - Exploratory Data Analysis
 # Fourth Task - Print 4 pictures into one graphic 
 
+# Set locale
+Sys.setlocale(category = "LC_ALL", locale = "en_US")
+
 # Read the data
 mydata <- read.table("household_power_consumption.txt",header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")
 
@@ -19,11 +22,11 @@ png("plot4.png", width=480, height=480)
 par(mfrow = c(2, 2)) 
 
 # Plotting
-plot(myDateTime, globalActivePower, type="l", xlab="Day of Week", ylab="Global Active Power")
-plot(myDateTime, voltage, type="l", xlab="Date/Time",ylab="Voltage")
-plot(myDateTime, mySubMetering1, type="l", ylab="Energy Submetering", xlab="Day of Week")
+plot(myDateTime, globalActivePower, type="l", xlab="", ylab="Global Active Power")
+plot(myDateTime, voltage, type="l", xlab="datetime",ylab="Voltage")
+plot(myDateTime, mySubMetering1, type="l", ylab="Energy Submetering", xlab="")
 lines(myDateTime, mySubMetering2, type="l", col="red")
 lines(myDateTime, mySubMetering3, type="l", col="blue")
 legend("topright", c("Sub_Metering_1", "Sub_Metering_2", "Sub_Metering_3"), lty=1, lwd=2.5, col=c("black", "red", "blue"))
-plot(myDateTime, globalReactivePower, type="l", xlab="Date/Time", ylab="Global_reactive_power")
+plot(myDateTime, globalReactivePower, type="l", xlab="datetime", ylab="Global_reactive_power")
 dev.off()

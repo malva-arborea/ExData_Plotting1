@@ -1,6 +1,9 @@
 # Course Project 1 - Exploratory Data Analysis
 # Second Task - Print Power Consumption on days of week 
 
+# Set locale
+Sys.setlocale(category = "LC_ALL", locale = "en_US")
+
 # Read the data
 mydata <- read.table("household_power_consumption.txt",header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")
 
